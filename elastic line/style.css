@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0, 0, 0);
+}
+
+/* elastic line */
+.elastic-line {
+  position: absolute;
+  width: 400px;
+  fill: none;
+}
+.elastic-line:nth-child(2) {
+  filter: blur(60px);
+}
+.elastic-line path {
+  d: path("M0,25 C150,110 150,-60 300,25");
+  stroke: cyan;
+  stroke-width: 50;
+  stroke-linecap: round;
+  transform: translate(50px, 50%);
+  animation: animate 1s ease-in-out infinite;
+}
+@keyframes animate {
+  0% {
+    stroke: cyan;
+    d: path("M0,25 C150,110 150,-60 300,25");
+  }
+  50% {
+    stroke: rgb(60, 0, 255);
+    d: path("M0,25 C160,-50 140,110 300,25");
+  }
+}

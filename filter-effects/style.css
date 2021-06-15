@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+svg {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+svg #I,
+#I2,
+#I3,
+#I4,
+#I5 {
+  stroke: coral;
+  stroke-width: 5px;
+  fill: transparent;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: animate 2s linear infinite;
+}
+svg #W,
+#W2,
+#L,
+#L2,
+#C,
+#R,
+#R2,
+#R3,
+#E,
+#E2,
+#E3,
+#E4,
+#A,
+#A2,
+#A3,
+#T,
+#T2,
+#T3,
+#S,
+#S2,
+#V,
+#G,
+#M,
+#N,
+#N2,
+#O,
+#O2,
+#O3,
+#F,
+#Y,
+#U,
+#B {
+  stroke: tomato;
+  stroke-width: 5px;
+  fill: transparent;
+  stroke-dasharray: 750;
+  stroke-dashoffset: 750;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
